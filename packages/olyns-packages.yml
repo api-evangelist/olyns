@@ -1,0 +1,16 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  Registry queries against npm, PyPI, RubyGems, crates.io, NuGet, Maven Central, pkg.go.dev
+  and Packagist, plus a GitHub org/repo search, on 2026-08-26.
+package_count: 0
+note: >-
+  Olyns publishes no client libraries. There is no github.com/olyns organization
+  (https://api.github.com/orgs/olyns returns 404); a GitHub-wide repository search surfaces
+  only personal repos belonging to individuals, none of them an Olyns SDK. npm search for
+  "olyns" returns zero packages; pypi.org/pypi/olyns/json, rubygems.org/api/v1/gems/olyns.json,
+  crates.io/api/v1/crates/olyns, api.nuget.org, repo1.maven.org/maven2/com/olyns/ and
+  proxy.golang.org all return 404; Packagist matches only an unrelated "olyslager" package.
+  No CDN-distributed component library is referenced from any Olyns page. No SDKs pointer is
+  emitted, because there is no SDK.
+packages: []

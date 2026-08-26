@@ -64,5 +64,24 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Olyns is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Olyns is a Silicon Valley company, founded in 2019, that operates an AI-powered reverse vending
+and retail media network built around the Olyns Cube — a self-serve kiosk that accepts beverage
+containers and rigid plastic packaging, uses computer vision to identify and sort each item at the
+point of deposit, pays the consumer their deposit (CRV) refund electronically, and carries a
+55-inch screen sold as digital-out-of-home advertising inventory.
+
+- https://olyns.com/
+
+## API surface
+
+**Olyns publishes no public API.** As of 2026-08-26 there is no developer portal, API reference,
+OpenAPI/AsyncAPI/GraphQL/gRPC/WSDL contract, SDK in any package registry, webhook catalog, MCP
+server or A2A agent card on any host Olyns controls. `api.olyns.com` is a private application
+backend for the consumer wallet app — it answers `GET /health` with `200` and returns `404` for
+every documentation and `/.well-known/*` path probed. `app.olyns.com` and `ads.olyns.com` are
+single-page apps whose catch-all returns `200` with an HTML shell for every path; those are not
+documents.
+
+The one machine-readable, standards-governed document Olyns does serve is its IAB Tech Lab
+[ads.txt](https://olyns.com/ads.txt) authorized-sellers declaration, naming Screenverse as the
+manager of its DOOH inventory. See `conformance/` and `well-known/` for the full probe record.

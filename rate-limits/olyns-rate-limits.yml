@@ -1,0 +1,13 @@
+generated: '2026-08-26'
+method: searched
+source: https://olyns.com/
+limit_count: 0
+note: >-
+  No rate limits are documented, because no public API is documented. Olyns publishes no
+  developer portal, API reference or machine-readable contract on any host it controls, so
+  there is nothing for a limit to be attached to and no published response headers to record.
+  The only unauthenticated endpoint observed on the app backend is
+  https://api.olyns.com/health (200, {"status": "success"}); it returns no X-RateLimit-*,
+  RateLimit-* or Retry-After header. This is an honest zero, not an unchecked field.
+limits: []
+headers: []

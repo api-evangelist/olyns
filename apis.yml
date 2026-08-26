@@ -1,17 +1,34 @@
 aid: olyns
 name: Olyns
-description: 'Olyns is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Olyns is a Silicon Valley company, founded in 2019, that operates an AI-powered reverse
+  vending and retail media network built around the Olyns Cube — a self-serve kiosk that
+  accepts beverage containers and rigid plastic packaging, uses computer vision to identify
+  and sort each item at the point of deposit, pays the consumer their deposit (CRV) refund
+  electronically, and carries a 55-inch screen that Olyns sells as digital-out-of-home
+  advertising inventory. Cubes are placed with supermarkets, big-box retailers, pharmacies
+  and gas stations, and the advertising side is sold both directly and programmatically
+  through Screenverse. Olyns ships consumer and operations software — a mobile/web wallet
+  app at app.olyns.com and a self-service ad portal at ads.olyns.com — but publishes no
+  public API, developer portal, SDK or machine-readable contract of any kind.
+image: https://cdn.prod.website-files.com/60abbd1fb2acc04328ed01e7/60b7cf28487dad27361d72ed_olyns-icon-256.png
 url: https://raw.githubusercontent.com/api-evangelist/olyns/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Recycling
+- Sustainability
+- Circular Economy
+- Retail Media
+- Digital Out-of-Home
+- Advertising
+- Artificial Intelligence
+- Reverse Vending
+- Consumer
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,60 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/olyns-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://olyns.com/
+- type: About
+  url: https://olyns.com/about-us
+- type: Blog
+  url: https://olyns.com/news
+- type: Support
+  url: https://olyns.com/app/support
+- type: SignUp
+  url: https://olyns.com/signup
+- type: TermsOfService
+  url: https://olyns.com/terms-conditions
+- type: PrivacyPolicy
+  url: https://olyns.com/privacy-policy
+- type: ContactUs
+  url: https://olyns.com/contact-us
+- type: LLMsTxt
+  url: llms/olyns-llms.txt
+- type: Conformance
+  url: conformance/olyns-conformance.yml
+- type: Plans
+  url: plans/olyns-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/olyns-rate-limits.yml
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Olyns ships software only as an end-user product — a consumer wallet SPA at app.olyns.com
+    and a sign-in-gated self-service ad portal at ads.olyns.com — and its only API host,
+    api.olyns.com, is a private application backend that answers GET /health with 200 but
+    returns a hard 404 for /openapi.json, /swagger.json, /docs, /redoc, /graphql, /api-docs,
+    ?wsdl and every /.well-known/* path, with no developer portal, API reference, SDK or
+    published contract anywhere on the sitemap.
+  evidence:
+  - url: https://api.olyns.com/health
+    status: 200
+  - url: https://api.olyns.com/openapi.json
+    status: 404
+  - url: https://api.olyns.com/graphql
+    status: 404
+  - url: https://api.olyns.com/.well-known/agent-card.json
+    status: 404
+  - url: https://olyns.com/llms.txt
+    status: 404
+  - url: https://olyns.com/.well-known/security.txt
+    status: 404
+  - url: https://api.github.com/orgs/olyns
+    status: 404
+  checked: '2026-08-26'

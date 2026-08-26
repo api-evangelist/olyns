@@ -1,0 +1,66 @@
+generated: '2026-08-26'
+method: probed
+source: >-
+  Live probes of olyns.com and every discovered Olyns host, plus a read of the public
+  marketing, terms and partner pages. Olyns publishes no OpenAPI, AsyncAPI, GraphQL SDL,
+  gRPC or WSDL contract, so every API-contract conformance assertion below is answered
+  from an absence of contract rather than from a spec.
+note: >-
+  REWARD-ONLY. Nothing here is scored against Olyns for being false. The single true
+  entry is a domain standard Olyns genuinely serves for its retail-media business — the
+  IAB Tech Lab authorized-sellers declaration — and it is recorded because it is the only
+  machine-readable, standards-governed document Olyns publishes anywhere on its own domain.
+conformance:
+- id: iab-ads-txt
+  name: IAB Tech Lab ads.txt (Authorized Digital Sellers)
+  conforms: true
+  evidence:
+    url: https://olyns.com/ads.txt
+    status: 200
+    content_type: text/plain
+    observed: >-
+      A well-formed ads.txt declaring ownerdomain=olyns.com, managerdomain=screenversemedia.com,
+      and a single DIRECT authorized-seller record for screenversemedia.com. This is the
+      machine-readable counterpart to Olyns' published partnership with Screenverse to sell
+      its digital-out-of-home Cube screen network on programmatic platforms.
+    note: >-
+      The same document is also served at https://olyns.com/ads-txt (200). No app-ads.txt is
+      published (https://olyns.com/app-ads.txt returns 404), which is the expected result for
+      a DOOH-only inventory owner with no in-app ad inventory.
+  domain_standard: true
+  market: digital-out-of-home / programmatic advertising
+- id: openrtb
+  name: IAB OpenRTB
+  conforms: false
+  evidence:
+    observed: >-
+      Olyns' DOOH inventory is transacted programmatically, but through Screenverse as the
+      manager/SSP — Olyns itself exposes no bid endpoint, no OpenRTB request/response schema
+      and no supply-side contract on any host it controls. The OpenRTB surface, if any,
+      belongs to screenversemedia.com, not to Olyns.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence:
+    observed: >-
+      No /.well-known/oauth-authorization-server or /.well-known/openid-configuration is
+      served on any Olyns host (see well-known/olyns-well-known.yml). Sign-in for the consumer
+      wallet app and the self-service ad portal is a first-party form; no OAuth surface is
+      published to third parties.
+- id: rfc9457
+  name: RFC 9457 Problem Details for HTTP APIs
+  conforms: false
+  evidence:
+    observed: No public API contract exists to declare a problem+json error envelope.
+- id: rfc8594
+  name: RFC 8594 Sunset / Deprecation headers
+  conforms: false
+  evidence:
+    observed: No public API and no published deprecation policy.
+- id: rfc9116
+  name: RFC 9116 security.txt
+  conforms: false
+  evidence:
+    url: https://olyns.com/.well-known/security.txt
+    status: 404
+    observed: Probed on all four Olyns hosts; not served anywhere.

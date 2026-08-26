@@ -1,0 +1,114 @@
+generated: '2026-08-26'
+method: probed
+source: live probes of /.well-known/* on every Olyns host discovered (website, app backend, consumer app
+  SPA, self-service ad portal SPA)
+note: No /.well-known document is served on any Olyns host. olyns.com answers every /.well-known/* path
+  with a 404 "Invalid .well-known request" page (Webflow); app.olyns.com and ads.olyns.com are single-page
+  apps whose catch-all returns HTTP 200 with an HTML shell for every path, which is NOT a document and
+  is recorded as a miss; api.olyns.com returns a real 404 for every path. No WellKnown or SecurityTxt
+  pointer is emitted, because nothing was served.
+hosts:
+- host: olyns.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: api.olyns.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: app.olyns.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: "HTTP 200 returned an HTML/SPA shell, not a document \u2014 treated as a miss"
+    content_type: text/html
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: "HTTP 200 returned an HTML/SPA shell, not a document \u2014 treated as a miss"
+    content_type: text/html
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    note: "HTTP 200 returned an HTML/SPA shell, not a document \u2014 treated as a miss"
+    content_type: text/html
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    note: "HTTP 200 returned an HTML/SPA shell, not a document \u2014 treated as a miss"
+    content_type: text/html
+  - path: /.well-known/api-catalog
+    status: 200
+    note: "HTTP 200 returned an HTML/SPA shell, not a document \u2014 treated as a miss"
+    content_type: text/html
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    note: "HTTP 200 returned an HTML/SPA shell, not a document \u2014 treated as a miss"
+    content_type: text/html
+  - path: /.well-known/agent-card.json
+    status: 200
+    note: "HTTP 200 returned an HTML/SPA shell, not a document \u2014 treated as a miss"
+    content_type: text/html
+  - path: /.well-known/agent.json
+    status: 200
+    note: "HTTP 200 returned an HTML/SPA shell, not a document \u2014 treated as a miss"
+    content_type: text/html
+- host: ads.olyns.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: "HTTP 200 returned an HTML/SPA shell, not a document \u2014 treated as a miss"
+    content_type: text/html; charset=UTF-8
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: "HTTP 200 returned an HTML/SPA shell, not a document \u2014 treated as a miss"
+    content_type: text/html; charset=UTF-8
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    note: "HTTP 200 returned an HTML/SPA shell, not a document \u2014 treated as a miss"
+    content_type: text/html; charset=UTF-8
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    note: "HTTP 200 returned an HTML/SPA shell, not a document \u2014 treated as a miss"
+    content_type: text/html; charset=UTF-8
+  - path: /.well-known/api-catalog
+    status: 200
+    note: "HTTP 200 returned an HTML/SPA shell, not a document \u2014 treated as a miss"
+    content_type: text/html; charset=UTF-8
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    note: "HTTP 200 returned an HTML/SPA shell, not a document \u2014 treated as a miss"
+    content_type: text/html; charset=UTF-8
+  - path: /.well-known/agent-card.json
+    status: 200
+    note: "HTTP 200 returned an HTML/SPA shell, not a document \u2014 treated as a miss"
+    content_type: text/html; charset=UTF-8
+  - path: /.well-known/agent.json
+    status: 200
+    note: "HTTP 200 returned an HTML/SPA shell, not a document \u2014 treated as a miss"
+    content_type: text/html; charset=UTF-8
