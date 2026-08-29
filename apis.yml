@@ -11,6 +11,17 @@ description: >-
   through Screenverse. Olyns ships consumer and operations software — a mobile/web wallet
   app at app.olyns.com and a self-service ad portal at ads.olyns.com — but publishes no
   public API, developer portal, SDK or machine-readable contract of any kind.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/60abbd1fb2acc04328ed01e7/60b7cf28487dad27361d72ed_olyns-icon-256.png
 url: https://raw.githubusercontent.com/api-evangelist/olyns/refs/heads/main/apis.yml
 x-type: company
