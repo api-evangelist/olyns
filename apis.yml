@@ -22,6 +22,19 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - rate-limits
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://cdn.prod.website-files.com/60abbd1fb2acc04328ed01e7/60b7cf28487dad27361d72ed_olyns-icon-256.png
 url: https://raw.githubusercontent.com/api-evangelist/olyns/refs/heads/main/apis.yml
 x-type: company
