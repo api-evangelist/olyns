@@ -64,24 +64,96 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Olyns is a Silicon Valley company, founded in 2019, that operates an AI-powered reverse vending
-and retail media network built around the Olyns Cube — a self-serve kiosk that accepts beverage
-containers and rigid plastic packaging, uses computer vision to identify and sort each item at the
-point of deposit, pays the consumer their deposit (CRV) refund electronically, and carries a
-55-inch screen sold as digital-out-of-home advertising inventory.
+Olyns is a Silicon Valley company, founded in 2019, that operates an AI-powered reverse vending and retail media network built around the Olyns Cube — a self-serve kiosk that accepts beverage containers and rigid plastic packaging, uses computer vision to identify and sort each item at the point of deposit, pays the consumer their deposit (CRV) refund electronically, and carries a 55-inch screen that Olyns sells as digital-out-of-home advertising inventory. Cubes are placed with supermarkets, big-box retailers, pharmacies and gas stations, and the advertising side is sold both directly and programmatically through Screenverse. Olyns ships consumer and operations software — a mobile/web wallet app at app.olyns.com and a self-service ad portal at ads.olyns.com — but publishes no public API, developer portal, SDK or machine-readable contract of any kind.
 
-- https://olyns.com/
+**Areas:** Company · Recycling · Sustainability · Circular Economy · Retail Media · Digital Out Of Home · Advertising · Artificial Intelligence · Reverse Vending · Consumer
 
-## API surface
+## Olyns on APIs.io
 
-**Olyns publishes no public API.** As of 2026-08-26 there is no developer portal, API reference,
-OpenAPI/AsyncAPI/GraphQL/gRPC/WSDL contract, SDK in any package registry, webhook catalog, MCP
-server or A2A agent card on any host Olyns controls. `api.olyns.com` is a private application
-backend for the consumer wallet app — it answers `GET /health` with `200` and returns `404` for
-every documentation and `/.well-known/*` path probed. `app.olyns.com` and `ads.olyns.com` are
-single-page apps whose catch-all returns `200` with an HTML shell for every path; those are not
-documents.
+Everything profiled for Olyns is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/olyns/](https://apis.io/providers/olyns/)** — or go straight to one of the APIs or properties below.
 
-The one machine-readable, standards-governed document Olyns does serve is its IAB Tech Lab
-[ads.txt](https://olyns.com/ads.txt) authorized-sellers declaration, naming Screenverse as the
-manager of its DOOH inventory. See `conformance/` and `well-known/` for the full probe record.
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Olyns Domain Security](https://apis.io/security/olyns/olyns-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Olyns Plans Pricing](https://apis.io/plans/olyns/olyns-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Olyns Rate Limits](https://apis.io/rate-limits/olyns/olyns-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://olyns.com/)
+- [Sign up](https://olyns.com/signup)
+- [Support](https://olyns.com/app/support)
+- [Blog](https://olyns.com/news)
+- [Terms of service](https://olyns.com/terms-conditions)
+- [Privacy policy](https://olyns.com/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 16.3** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 34.2 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/olyns/](https://apis.io/providers/olyns/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Olyns: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/olyns/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
